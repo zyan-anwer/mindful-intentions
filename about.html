@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__logo">
+          <img src="Images/logo 1.webp" alt="logo" width="100px">MINDFULL <span>INTENSION</span>
+         
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="about.html">About</a></li>
+          <li class="link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  
+    <section>
+        <div class="about-us">
+            <h1>"About us"</h1>
+            <div class="wrapper">
+                <div class="content">
+                    <h3>Mindful intention involves focusing on the present moment with purpose and awareness, fostering
+                        clarity and peace.</h3>
+                    <p>
+                        Yoga is a holistic practice that combines physical postures, breathing exercises, and
+                        meditation. It promotes flexibility, strength, and mental clarity, helping to reduce stress and
+                        improve overall well-being. Regular practice fosters harmony between mind and body.</p>
+                    <div class="button">
+                        <a href="">read more</a>
+                    </div>
+                    <div class="social">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="image/picture.webp">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Mindfull Intension</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Service</a>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <form id="subscribe-form">
+                    <input type="text" id="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="message"></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+  document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var emailField = document.getElementById('email');
+    var message = document.getElementById('message');
+  
+    if (validateEmail(emailField.value)) {
+        message.style.color = 'green';
+        message.textContent = 'Thank you for subscribing!';
+        emailField.value = '';
+    } else {
+        message.style.color = 'red';
+        message.textContent = 'Please enter a valid email address.';
+    }
+  });
+  
+  function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+    </script>
+
+
+</body>
+
+</html>
